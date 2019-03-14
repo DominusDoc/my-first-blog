@@ -11,29 +11,13 @@
     </div>
 
 
-    <div>
-        <p>published: 14.03.2019, 12:12</p>
-        <h2><a href="">My first post</a></h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi auctor tortor eget odio finibus sagittis. Donec bibendum eget dolor ultricies dignissim. Nullam bibendum suscipit tellus at interdum. Morbi rhoncus sem at cursus placerat. Integer iaculis felis a libero aliquet, id tincidunt felis pharetra. Sed nec risus non lorem feugiat ultrices. Integer quis nisl ac nisi varius pretium. Mauris ullamcorper fermentum est, maximus blandit magna laoreet id. Proin eu nulla ac quam dapibus varius non a est.
-
-    Ut elementum dui at massa tempor sodales. Aliquam luctus massa orci, posuere consectetur lorem molestie nec. Donec sollicitudin mi eu nibh ullamcorper condimentum. Curabitur et quam arcu. Proin turpis elit, iaculis non rutrum quis, aliquam a massa. Sed congue vestibulum augue, in suscipit elit euismod et. Pellentesque cursus neque vulputate, accumsan urna nec, vulputate odio. Nunc posuere lorem felis. Vivamus placerat metus vel mi gravida lobortis. Fusce dapibus mi nisi, non bibendum velit facilisis vitae. Integer nec ante tellus. Cras quis rutrum nulla, ac viverra massa. Mauris ut consectetur diam.
-
-    Nulla tincidunt, dui sit amet varius blandit, justo neque dapibus urna, ut consectetur justo diam non mauris. Aliquam sodales sapien non mollis congue. Donec tincidunt metus tincidunt ipsum pellentesque pellentesque. Vestibulum sollicitudin finibus arcu at ultricies. Donec quis dui et ex eleifend suscipit ut sit amet turpis. Nam in lobortis mauris. Curabitur ornare, sem eu fringilla eleifend, elit nunc feugiat ligula, eu pellentesque dolor quam a lacus. In quis molestie orci. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed eu ligula in lacus vestibulum faucibus eu in felis. Nunc vel dolor quis lorem sagittis gravida in a purus. Aliquam erat volutpat. Vestibulum consequat sapien id ex viverra, in tempus tellus cursus.
-
-    Praesent eu condimentum dui, a pellentesque nunc. Fusce a tortor turpis. Pellentesque volutpat ac leo sit amet elementum. Nunc at mi accumsan, sagittis nisi non, dapibus augue. Vivamus arcu urna, scelerisque vel aliquam in, suscipit a ipsum. Phasellus sem nulla, gravida ac pretium id, elementum et ex. Donec varius purus tortor, non eleifend est consectetur quis. Vestibulum luctus facilisis blandit. Suspendisse consequat at enim id bibendum. Nunc euismod et lectus quis porta. Sed ornare ex vel imperdiet lobortis. Morbi sem felis, mollis lacinia porttitor suscipit, mattis quis dolor. Phasellus convallis sodales orci, quis suscipit libero interdum vel. Morbi cursus, libero sit amet fringilla euismod, mi felis commodo justo, sit amet posuere massa purus vel dui.</p>
-    </div>
-
-   <div>
-        <p>published: 14.03.2019, 13:12</p>
-        <h2><a href="">My second post</a></h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi auctor tortor eget odio finibus sagittis. Donec bibendum eget dolor ultricies dignissim. Nullam bibendum suscipit tellus at interdum. Morbi rhoncus sem at cursus placerat. Integer iaculis felis a libero aliquet, id tincidunt felis pharetra. Sed nec risus non lorem feugiat ultrices. Integer quis nisl ac nisi varius pretium. Mauris ullamcorper fermentum est, maximus blandit magna laoreet id. Proin eu nulla ac quam dapibus varius non a est.
-
-    Ut elementum dui at massa tempor sodales. Aliquam luctus massa orci, posuere consectetur lorem molestie nec. Donec sollicitudin mi eu nibh ullamcorper condimentum. Curabitur et quam arcu. Proin turpis elit, iaculis non rutrum quis, aliquam a massa. Sed congue vestibulum augue, in suscipit elit euismod et. Pellentesque cursus neque vulputate, accumsan urna nec, vulputate odio. Nunc posuere lorem felis. Vivamus placerat metus vel mi gravida lobortis. Fusce dapibus mi nisi, non bibendum velit facilisis vitae. Integer nec ante tellus. Cras quis rutrum nulla, ac viverra massa. Mauris ut consectetur diam.
-
-    Nulla tincidunt, dui sit amet varius blandit, justo neque dapibus urna, ut consectetur justo diam non mauris. Aliquam sodales sapien non mollis congue. Donec tincidunt metus tincidunt ipsum pellentesque pellentesque. Vestibulum sollicitudin finibus arcu at ultricies. Donec quis dui et ex eleifend suscipit ut sit amet turpis. Nam in lobortis mauris. Curabitur ornare, sem eu fringilla eleifend, elit nunc feugiat ligula, eu pellentesque dolor quam a lacus. In quis molestie orci. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed eu ligula in lacus vestibulum faucibus eu in felis. Nunc vel dolor quis lorem sagittis gravida in a purus. Aliquam erat volutpat. Vestibulum consequat sapien id ex viverra, in tempus tellus cursus.
-
-    Praesent eu condimentum dui, a pellentesque nunc. Fusce a tortor turpis. Pellentesque volutpat ac leo sit amet elementum. Nunc at mi accumsan, sagittis nisi non, dapibus augue. Vivamus arcu urna, scelerisque vel aliquam in, suscipit a ipsum. Phasellus sem nulla, gravida ac pretium id, elementum et ex. Donec varius purus tortor, non eleifend est consectetur quis. Vestibulum luctus facilisis blandit. Suspendisse consequat at enim id bibendum. Nunc euismod et lectus quis porta. Sed ornare ex vel imperdiet lobortis. Morbi sem felis, mollis lacinia porttitor suscipit, mattis quis dolor. Phasellus convallis sodales orci, quis suscipit libero interdum vel. Morbi cursus, libero sit amet fringilla euismod, mi felis commodo justo, sit amet posuere massa purus vel dui.</p>
-    </div>
+    {% for post in posts %}
+        <div>
+            <p>published: {{ post.published_date }}</p>
+            <h1><a href="">{{ post.title }}</a></h1>
+            <p>{{ post.text|linebreaksbr }}</p>
+        </div>
+    {% endfor %}
 
 </body>
 </html>
