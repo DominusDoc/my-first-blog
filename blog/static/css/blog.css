@@ -1,0 +1,22 @@
+body {
+    background-image: url(http://365psd.ru/images/backgrounds/bg-lightl-903.jpg);
+}
+
+h1 a {
+    color: saddlebrown;
+    font-family: 'Lobster';
+    padding-left: 30px;
+}
+h1 a:hover {
+    color: whitesmoke;
+}
+
+.page-header {
+    background-color: darkorange;
+    padding: 20px;
+    margin: 0;
+}
+
+p {
+    padding: 20px;
+}
